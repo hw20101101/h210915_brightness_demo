@@ -25,17 +25,24 @@
     // Do any additional setup after loading the view.
     
     //添加亮度指示器
-    self.slider = [[CustomSlider alloc] initWithFrame:CGRectMake(10, 100, 20, 100)];
     [self.view addSubview:self.slider];
     
     //添加滑动手势
     UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handleGesture:)];
     [self.view addGestureRecognizer:panGestureRecognizer];
-    
-    //获取当前的屏幕亮度
-    CGFloat brightness = [UIScreen mainScreen].brightness;
-    int value = ceilf((1.0 - brightness) * 100);
-    [self.slider setHighlightViewFrame:value];
+}
+
+- (CustomSlider *)slider {
+    if (!_slider) {
+        _slider = [[CustomSlider alloc] initWithFrame:CGRectMake(10, 100, 20, 100)];
+        _slider.alpha = 0;
+        
+        //获取当前的屏幕亮度
+        CGFloat brightness = [UIScreen mainScreen].brightness;
+        int value = ceilf((1.0 - brightness) * 100);
+        [_slider setHighlightViewFrame:value];
+    }
+    return _slider;
 }
 
 #pragma mark - 手势处理
@@ -53,16 +60,21 @@
             if (self.startPoint.x == 0 && self.startPoint.y == 0) {//起始位置
                 self.startPoint = point;
             }
-            
-            //获取当前的屏幕亮度
-            CGFloat brightness = [UIScreen mainScreen].brightness;
-                
+              
             //不处理横向滑动
             if (self.startPoint.x - point.x > 10) {
                 return;
             } else if(self.startPoint.x - point.x < -10){
                 return;
             }
+            
+            //显示亮度指示器
+            [UIView animateWithDuration:0.3 animations:^{
+                self.slider.alpha = 1;
+            }];
+            
+            //获取当前的屏幕亮度
+            CGFloat brightness = [UIScreen mainScreen].brightness;
             
             if (self.startPoint.y > point.y) { //往上滑动
                                                 
@@ -103,6 +115,12 @@
              
             //重置数据
             self.startPoint = CGPointZero;
+            
+            //隐藏亮度指示器
+            [UIView animateWithDuration:2 animations:^{
+                self.slider.alpha = 0;
+            }];
+            
             break;
         }
         default:{
