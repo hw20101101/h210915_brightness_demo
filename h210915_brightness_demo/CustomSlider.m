@@ -35,7 +35,7 @@
     //添加半透明背景视图
     self.translucentView = [[UIView alloc] initWithFrame:self.bounds];
     self.translucentView.backgroundColor = [UIColor colorWithWhite:0.5 alpha:0.4];
-    self.translucentView.layer.cornerRadius = 4;
+    self.translucentView.layer.cornerRadius = 6;
     [self addSubview:self.translucentView];
     
     //添加默认颜色视图

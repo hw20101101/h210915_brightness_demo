@@ -35,12 +35,17 @@
 - (CustomSlider *)slider {
     if (!_slider) {
         _slider = [[CustomSlider alloc] initWithFrame:CGRectMake(10, 100, 35, 135)];
-        _slider.alpha = 0;
+        _slider.alpha = 1.0;
         
         //获取当前的屏幕亮度
         CGFloat brightness = [UIScreen mainScreen].brightness;
         int value = ceilf((1.0 - brightness) * 100);
         [_slider setHighlightViewFrame:value];
+        
+        //隐藏亮度指示器
+        [UIView animateWithDuration:3 animations:^{
+            self.slider.alpha = 0;
+        }];
     }
     return _slider;
 }
