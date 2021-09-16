@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		061D263526F38B2600CD0428 /* HWVerticalSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 061D263426F38B2600CD0428 /* HWVerticalSlider.m */; };
 		0684CF6826F22F3C00341621 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0684CF6726F22F3C00341621 /* AppDelegate.m */; };
 		0684CF6B26F22F3C00341621 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0684CF6A26F22F3C00341621 /* SceneDelegate.m */; };
 		0684CF6E26F22F3C00341621 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0684CF6D26F22F3C00341621 /* ViewController.m */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		061D263326F38B2600CD0428 /* HWVerticalSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWVerticalSlider.h; sourceTree = "<group>"; };
+		061D263426F38B2600CD0428 /* HWVerticalSlider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWVerticalSlider.m; sourceTree = "<group>"; };
 		0684CF6326F22F3C00341621 /* h210915_brightness_demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = h210915_brightness_demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0684CF6626F22F3C00341621 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0684CF6726F22F3C00341621 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -72,6 +75,8 @@
 				0684CF8226F22F5B00341621 /* CustomSlider.m */,
 				0684CF6C26F22F3C00341621 /* ViewController.h */,
 				0684CF6D26F22F3C00341621 /* ViewController.m */,
+				061D263326F38B2600CD0428 /* HWVerticalSlider.h */,
+				061D263426F38B2600CD0428 /* HWVerticalSlider.m */,
 				0684CF6F26F22F3C00341621 /* Main.storyboard */,
 				0684CF7226F22F3F00341621 /* Assets.xcassets */,
 				0684CF7426F22F3F00341621 /* LaunchScreen.storyboard */,
@@ -155,6 +160,7 @@
 				0684CF7926F22F3F00341621 /* main.m in Sources */,
 				0684CF6B26F22F3C00341621 /* SceneDelegate.m in Sources */,
 				0684CF8326F22F5B00341621 /* CustomSlider.m in Sources */,
+				061D263526F38B2600CD0428 /* HWVerticalSlider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
