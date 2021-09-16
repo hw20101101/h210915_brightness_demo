@@ -10,8 +10,6 @@
 
 @interface CustomSlider : UIView
 
-@property(nonatomic, strong) UIView *highlightView;
-
 -(void)setHighlightViewFrame:(int)tempValue;
 
 @end

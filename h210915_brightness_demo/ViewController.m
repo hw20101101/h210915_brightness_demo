@@ -34,7 +34,7 @@
 
 - (CustomSlider *)slider {
     if (!_slider) {
-        _slider = [[CustomSlider alloc] initWithFrame:CGRectMake(10, 100, 20, 100)];
+        _slider = [[CustomSlider alloc] initWithFrame:CGRectMake(10, 100, 35, 135)];
         _slider.alpha = 0;
         
         //获取当前的屏幕亮度
@@ -117,7 +117,7 @@
             self.startPoint = CGPointZero;
             
             //隐藏亮度指示器
-            [UIView animateWithDuration:2 animations:^{
+            [UIView animateWithDuration:3 animations:^{
                 self.slider.alpha = 0;
             }];
             
